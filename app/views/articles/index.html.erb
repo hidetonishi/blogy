@@ -1,0 +1,26 @@
+<body>
+
+<header></header>
+
+<div class="conteiner">
+  <div class="kiji">
+  <% @articles.each do |article|%>
+    <%= link_to article do %>
+      <div class="col-md-3">
+        <%= image_tag 'flower.jpg', class: 'flower-img' %><br>
+        <div class="menu">
+          <p><%= article.title %></p><br>
+          <span>
+          <%= article.created_at.strftime("%Y-%m-%d %H:%M") %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+  <div class="low">
+    <%# <%= link_to '新規作成', new_article_path %>
+  </div>
+</div>
+
+</body>

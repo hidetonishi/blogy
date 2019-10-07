@@ -1,0 +1,39 @@
+.header {
+  height: 150px;
+  background-image: url( asset-path("banner1.jpg"));
+  border-bottom: solid 2px #FFF;
+}
+
+.header-title {
+  padding: 20px 25px;
+  font-size: 80px;
+  color: white;
+  float: left;
+  font-weight: bold;
+}
+
+.nav-header{
+  float: right;
+  margin: 40px 50px 5px 50px;
+}
+
+
+.btn-square {
+  margin-right: 10px;
+  display: inline-block;
+  // max-width: 220px;
+  text-align: left;
+  background-color: #8b4513;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 25px;
+  border: 1px dashed #FFF;
+  box-shadow: 0px 0px 0px 5px #8b4513;/* box-shadowで外枠を */
+}
+.btn-square:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}

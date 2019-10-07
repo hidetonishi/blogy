@@ -1,0 +1,14 @@
+<div class="conteiner">
+  <div class="col-md-12">
+    <%= image_tag 'flower.jpg', class: 'flower-img' %><br>
+    <h1 class="title"><%= @article.title %></h1>
+    <div class="menu">
+      <p><%= simple_format @article.body %></p><br>
+      <span>
+        <%# <%= article.created_at.strftime("%Y-%m-%d %H:%M") %>
+      </span>
+    </div>
+    <%= link_to '編集', edit_article_path(@article), class: "btn-square"%>
+    <%= link_to '削除', article_path(@article), method: :delete, date: {confilm: '削除してもよろしいですか？'}, class: "btn-square" %>
+  </div>
+</div>

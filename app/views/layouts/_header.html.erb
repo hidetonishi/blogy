@@ -1,0 +1,20 @@
+
+    <div class="header">
+        <% if user_signed_in? %>
+          <a class="main-header" href="/" >
+          <p class="header-title">Rails blog</p><br></a>
+        <% else %>
+          <a class="main-header" href="/">
+          <p class="header-title">Rails blog</p></a>
+        <% end %>
+      <p class="nav-header">
+        <% if user_signed_in? %>
+          <%= link_to '新規作成', new_article_path, class: "btn-square" %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn-square" %>
+        <% else %>
+          <%= link_to 'ユーザー登録', new_user_registration_path, class: "btn-square" %>
+          &nbsp;
+          <%= link_to 'ログイン', new_user_session_path, class: "btn-square" %>
+        <% end %>
+      </p>
+    </div>
